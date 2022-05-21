@@ -1,1 +1,1 @@
-# template-spa
+# template-electron
