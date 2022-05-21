@@ -4,11 +4,10 @@
     "module": "commonjs",
     "sourceRoot": "./src",
     "sourceMap": true,
-    "outDir": "./dist",
     "strict": true,
     "jsx": "react",
     "esModuleInterop": true,
     "baseUrl": "."
   },
-  "include": ["src/**/*", "esbuild.js"]
+  "include": ["src/**/*"]
 }

@@ -6,7 +6,7 @@
     "update": "ncu -u",
     "lint": "eslint ./src/* && prettier -w src",
     "dev": "vite",
-    "build:renderer": "tsc && vite build",
+    "build:renderer": "vite build",
     "build:main": "node esbuild.js",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
