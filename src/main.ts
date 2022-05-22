@@ -31,10 +31,7 @@ const main = async () => {
     if (process.platform !== 'darwin') app.quit();
   });
 
-  await app.whenReady().catch(() => {
-    console.log('zxcv1');
-    throw new Error();
-  });
+  await app.whenReady();
   await createWindow();
 
   app.on('activate', () => {
@@ -45,14 +42,11 @@ const main = async () => {
     };
 
     handler().catch((err) => {
-      console.log('asdf');
       throw err;
     });
   });
 };
 
 main().catch((err) => {
-  console.log('zxcvzxcv');
-  console.error(err);
   throw err;
 });
