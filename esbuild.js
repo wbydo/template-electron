@@ -8,6 +8,7 @@ const result = buildSync({
   platform: 'node',
   target: ['node16'],
   tsconfig: resolve(__dirname, 'tsconfig.json'),
+  external: ['electron'],
 });
 
 //正常時のresult -> { errors: [], warnings: [] }
