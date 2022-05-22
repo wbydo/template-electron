@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 import { Top } from './components/pages/Top';
 
-import './main.css';
+import './renderer.css';
 
 const App: FC = () => <Top />;
 

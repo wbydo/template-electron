@@ -1,5 +1,5 @@
 {
-  "name": "template-spa",
+  "name": "template-electron",
   "private": true,
   "scripts": {
     "test": "jest",
