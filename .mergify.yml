@@ -4,7 +4,7 @@ pull_request_rules:
       - author~=^dependabot(|-preview)\[bot\]$
       - -conflict
       - check-success=test
-      - title~=^Bump [^\s]+ from ([\d]+)\.([\d]+)\..+ to \1\.\2\..
+      - 'title~=^(build\(deps-dev\): )?Bump [^\s]+ from ([\d]+)\.[^\s]+ to \2\.[^\s]+'
     actions:
       merge:
         method: merge
