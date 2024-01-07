@@ -6,7 +6,28 @@ import { Top } from './components/pages/Top';
 
 import './renderer.css';
 
-const App: FC = () => <Top />;
+export interface IElectronAPI {
+  doAnything: () => Promise<void>;
+}
+
+declare global {
+  interface Window {
+    myAPI: IElectronAPI;
+  }
+}
+
+const App: FC = () => (
+  <>
+    <Top />
+    <button
+      onClick={() => {
+        window.myAPI.doAnything().catch((err) => console.error(err));
+      }}
+    >
+      ElectronAPI
+    </button>
+  </>
+);
 
 ReactDOM.render(
   <React.StrictMode>

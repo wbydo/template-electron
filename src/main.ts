@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -6,9 +6,9 @@ const createWindow = async () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    // webPreferences: {
-    //   preload: path.join(__dirname, 'preload.js'),
-    // },
+    webPreferences: {
+      preload: path.join(__dirname, 'pre-load.js'),
+    },
   });
 
   const appURL = app.isPackaged
@@ -31,9 +31,9 @@ const main = async () => {
     if (process.platform !== 'darwin') app.quit();
   });
 
-  await app.whenReady().catch(() => {
-    console.log('zxcv1');
-    throw new Error();
+  await app.whenReady();
+  ipcMain.handle('myAPI.doAnything', () => {
+    console.log('myAPI.doAnything');
   });
   await createWindow();
 
@@ -45,14 +45,11 @@ const main = async () => {
     };
 
     handler().catch((err) => {
-      console.log('asdf');
       throw err;
     });
   });
 };
 
 main().catch((err) => {
-  console.log('zxcvzxcv');
-  console.error(err);
   throw err;
 });

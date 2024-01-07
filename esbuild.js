@@ -2,8 +2,11 @@ const { buildSync } = require('esbuild');
 const { resolve } = require('path');
 
 const result = buildSync({
-  entryPoints: [resolve(__dirname, 'src', 'main.ts')],
-  outfile: resolve(__dirname, 'dist', 'main.js'),
+  entryPoints: [
+    resolve(__dirname, 'src', 'main.ts'),
+    resolve(__dirname, 'src', 'pre-load.ts'),
+  ],
+  outdir: resolve(__dirname, 'dist'),
   bundle: true,
   platform: 'node',
   target: ['node16'],
