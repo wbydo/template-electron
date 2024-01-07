@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "//#fixpack": {},
+    "fixpack": {
+      "dependsOn": ["^fixpack", "//#fixpack"]
+    },
+
+    "//#update": {},
+    "update": {
+      "dependsOn": ["^update", "//#update"]
+    },
+
+    "@~/main#build": {
+      "inputs": ["./apps/main/src", "./apps/main/esbuild.js"],
+      "outputs": ["./apps/main/dist/index.js"]
+    },
+    "@~/pre-load#build": {
+      "inputs": ["./apps/pre-load/src", "./apps/pre-load/esbuild.js"],
+      "outputs": ["./apps/pre-load/dist/index.js"]
+    },
+    "//#dev": {
+      "dependsOn": ["@~/main#build", "@~/pre-load#build"]
+    }
+  }
+}

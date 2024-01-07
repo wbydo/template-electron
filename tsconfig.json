@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "sourceRoot": "./src",
+    "target": "ESNext",
+    "module": "NodeNext",
     "sourceMap": true,
     "strict": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "baseUrl": "."
-  },
-  "include": ["src/**/*"]
+    "isolatedModules": true
+  }
 }

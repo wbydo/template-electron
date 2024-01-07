@@ -1,1 +1,1 @@
-# template-electron
+# template-typescript

@@ -1,0 +1,29 @@
+{
+  "name": "@~/renderer",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "devDependencies": {
+    "@~/constants": "^1.0.0",
+    "@~/trpc": "^1.0.0",
+    "@macaron-css/core": "^1.2.0",
+    "@macaron-css/vite": "^1.4.3",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "fixpack": "^4.0.0",
+    "npm-check-updates": "^16.14.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite",
+    "fixpack": "fixpack",
+    "preview": "vite preview"
+  }
+}

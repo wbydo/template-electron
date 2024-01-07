@@ -1,7 +1,7 @@
 module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.ts$': 'esbuild-jest',
   },
   globals: {
     'ts-jest': {
