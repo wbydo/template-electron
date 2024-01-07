@@ -8,9 +8,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react/recommended',
-    'plugin:storybook/recommended',
     'prettier',
+    'prettier/@typescript-eslint',
+    // "plugin:react/recommended"
   ],
   globals: {
     Atomics: 'readonly',
@@ -20,12 +20,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
-    project: './tsconfig.json',
   },
-  plugins: ['react', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    // "react-hooks"
+  ],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    // "react-hooks/rules-of-hooks": "error",
+    // "react-hooks/exhaustive-deps": "warn"
   },
 };

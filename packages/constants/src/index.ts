@@ -1,0 +1,3 @@
+export const APP_API_KEY = 'APP_API_KEY';
+export const APP_API_PROPERTY_NAME = 'APP_API_PROPERTY_NAME';
+export const APP_CHANNEL_NAME = 'APP_CHANNEL_NAME';

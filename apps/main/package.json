@@ -1,0 +1,23 @@
+{
+  "name": "@~/main",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "devDependencies": {
+    "@~/trpc": "^1.0.0",
+    "electron": "^28.1.0",
+    "esbuild-plugin-clean": "^1.0.1",
+    "fixpack": "^4.0.0",
+    "npm-check-updates": "^16.14.12",
+    "ts-node": "^10.9.2"
+  },
+  "license": "ISC",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.js",
+    "dev": "electron .",
+    "fixpack": "fixpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
